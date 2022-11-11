@@ -1,0 +1,63 @@
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #fafafa;
+  transition: all 0.5s ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.theme{
+  
+  justify-content: end;
+  top: 20px;
+  right: 120px;
+  display: flex;
+  align-items: center;
+  transition: background 0.8 linear;
+  
+}
+
+body.dark {
+  background: #292C35;
+  transition: all 0.5s ;
+}
+.checkbox{
+  opacity: 0;
+  position: absolute;
+}
+.label{
+  background: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height:40px ;
+  width: 90px;
+  transform: scale(1.0);
+}
+.label .ball{
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+
+  height: 32px;
+  width: 32px;
+
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball{
+  transform:translateX(50px) ;
+}
